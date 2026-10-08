@@ -1,0 +1,50 @@
+First time
+
+Check that everything is installed (any PowerShell window):
+
+powershell
+java -version
+mvn -version
+node -v
+npm -v
+
+You need Java 17+, Maven, and Node 18+.
+
+PowerShell window 1: backend
+
+powershell
+cd C:\Projects\taskflow\backend
+mvn spring-boot:run
+
+The first run downloads dependencies, which takes a few minutes. It's ready when you see Started TaskflowApplication. Leave this window open.
+
+PowerShell window 2: frontend
+
+powershell
+cd C:\Projects\taskflow\frontend
+npm install
+npm run dev
+
+Leave this one open too.
+
+Browser: open http://localhost:5173 and click Sign up.
+
+Every time after that
+
+Window 1:
+
+powershell
+cd C:\Projects\taskflow\backend
+mvn spring-boot:run
+
+Window 2:
+
+powershell
+cd C:\Projects\taskflow\frontend
+npm run dev
+
+You don't need npm install again unless you change package.json.
+
+Stopping
+
+Press Ctrl + C in each window.
